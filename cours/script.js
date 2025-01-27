@@ -38,10 +38,29 @@ let person= {
     isNull: null
 };
 
-log(person.name); 
+console.log(person.name); 
+console.log(person.country[1]); 
+
+let nom ='Myra'
+console.log(nom.length); 
 
 // ----tableaux- 02
+let array3 = ["Bafou",47,true ,"Bafang","Bamenda",null,{
+    name: "Myra",
+    age: 42,
+}];
 
-let array3 = ["Bafou",42,true ,"Bafang","Bamenda",null];
+// affiche 42 ==
+console.log(array3[7]);
+
+//affiche Bamenda ==
 
 
+//-------------- Les objts et plus
+let objet = {
+  firstname: "rosto",
+  lastname: "dev",
+  age: 29,
+  technos: ["Javascript", "NodeJs", "React", "laravel", "Flutter"],
+  admin: false
+  }
