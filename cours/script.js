@@ -17,3 +17,15 @@ console.log(typeof(array)) // object;
 
 let nbre;
 console.log(nbre) // undefined;
+
+
+// Les tableaux
+
+// ---tableaux- 01
+let array2 = ["Bafou","Batie","Bafang","Bamenda"];
+
+console.log(array2[0][2]); // Bafou
+
+console.log(length(array2)); // 4
+
+
