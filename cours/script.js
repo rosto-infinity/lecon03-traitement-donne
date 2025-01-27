@@ -28,8 +28,20 @@ console.log(array2[0][2]); // f
 
 console.log(array2.length ); // 4
 
+// ---Object
+let person= {
+    name: "Bafou",
+    age: 42,
+    isTrue: true,
+    city: "Bafang",
+    country: "Cameroon",
+    isNull: null
+};
+
+log(person.name); 
+
 // ----tableaux- 02
 
-let array3 = ["Bafou",42,true ,"Bafang","Bamenda"];
+let array3 = ["Bafou",42,true ,"Bafang","Bamenda",null];
 
 
