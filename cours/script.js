@@ -24,8 +24,12 @@ console.log(nbre) // undefined;
 // ---tableaux- 01
 let array2 = ["Bafou","Batie","Bafang","Bamenda"];
 
-console.log(array2[0][2]); // Bafou
+console.log(array2[0][2]); // f
 
-console.log(length(array2)); // 4
+console.log(array2.length ); // 4
+
+// ----tableaux- 02
+
+let array3 = ["Bafou",42,true ,"Bafang","Bamenda"];
 
 
