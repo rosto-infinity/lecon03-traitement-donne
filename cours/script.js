@@ -109,3 +109,52 @@ if(data[0].age >data[1].age ){
 }else{
   console.log(data[0].firstname + " est plus jeune que " + data[1].firstname);
 }
+
+document.body.addEventListener("click", (e) => {
+  console.log(e.target);
+
+  if(e.target.id === "javascript"){
+    document.body.style.background= "yellow";
+  }else if(e.target.id === "php"){
+    document.body.style.backgroundColor = "purple"; 
+  }else if(e.target.id === "python"){
+    document.body.style.backgroundColor = "blue";
+  }else if(e.target.id === "laravel"){
+    document.body.style.backgroundColor = "red";
+  }
+});
+
+
+
+Switch
+document.body.addEventListener("click", (e) => {
+  switch(e.target.id){
+    case "javascript":
+      document.body.style.backgroundColor = "yellow";
+      break;
+    case "php":
+      document.body.style.backgroundColor = "purple";
+      break;
+    case "python":
+      document.body.style.backgroundColor = "blue";
+      break;
+    case "laravel":
+      document.body.style.backgroundColor = "red";
+      break;
+    default:
+      document.body.style.backgroundColor = "white";
+  }
+});
+
+
+//while
+
+// let w=0;
+
+// while(w<10){
+//   w++;
+//   console.log("la valeur de w est de " + w);
+// }
+
+
+//text-typing 
