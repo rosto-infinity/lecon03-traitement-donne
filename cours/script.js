@@ -390,9 +390,6 @@ let resultat15 = texte15.split(" "); // ["Hello", "World"]
 let texte16 = "Hello World";
 let resultat16 = texte16.startsWith("Hello"); // true
 
-// 19-substr() : Extrait les caractères d'une chaîne, en commençant à une position spécifiée, et a une longueur spécifiée.
-let texte17 = "Hello World";
-let resultat17 = texte17.substr(6, 5); // "World"
 
 
 
