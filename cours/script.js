@@ -417,7 +417,13 @@ const isoDate4 = date4.toISOString();
 const isoDate5 = date4.toLocaleDateString();
  console.log(isoDate5);
 
+//Tmestamp
 
+const date6 = new Date();
+const timestamp = Date.parse(date6);
+
+// console.log(timestamp);
+// 1738230071000 : le nombre complet est un billion, sept cent trente-huit milliards, deux cent trente millions, soixante et onze mille.
 
 
 
