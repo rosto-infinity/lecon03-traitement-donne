@@ -403,7 +403,7 @@ const date2 = new Date("2025-01-31");
 
 const date3 = new Date();
 const year =date3.getMinutes()
-console.log(year);
+// console.log(year);
 
 
 //Format ISO en date
@@ -415,16 +415,35 @@ let date5 = new Date();
 
 const isoDate4 = date4.toISOString();
 const isoDate5 = date4.toLocaleDateString();
- console.log(isoDate5);
+//  console.log(isoDate5);
 
 //Tmestamp
 
 const date6 = new Date();
 const timestamp = Date.parse(date6);
-
+// 1738230071000 
 // console.log(timestamp);
 // 1738230071000 : le nombre complet est un billion, sept cent trente-huit milliards, deux cent trente millions, soixante et onze mille.
 
+function dateParser(chaine){
+
+  const date = new Date(chaine);
+  const dateFr =date.toLocaleDateString('fr-FR', {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+    hour: "numeric",
+    minute: "numeric",
+    second: "numeric",
+    weekday: "long"
+  });
+  
+  return dateFr
+}
+console.log(dateParser(timestamp));
+// let daate=1738230071000 
+// console.log(dateParser(daate));
+// console.log(dateParser(date6));
 
 
 
