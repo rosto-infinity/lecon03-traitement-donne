@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>palindrome</title>
+    <style>
+        *, ::after, ::before{
+    font-family: Verdana, Geneva, sans-serif;
+    padding: 0;
+    margin: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+body{
+    background-color: #333;
+    color:#f1f1f1
+}
+h1{
+    text-align: center;
+    padding-top: 30px;
+}
+.container{
+    padding-top: 40px;
+    display: flex;
+    width: 400px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    flex-direction: column;
+    gap:30px;
+}
+input{
+    padding: 10px;
+
+}
+button{
+    width: 210px;
+    padding: 10px;
+}
+.true{
+    padding: 10px;
+    width: 210px;
+    border:3px solid green;
+    border-radius: 9999px;
+}
+.false{
+    padding: 10px;
+    width: 210px;
+    border:3px solid red;
+    border-radius: 9999px;
+}
+    </style>
+</head>
+<body>
+    <style>
+
+    </style>
+    <h1>bienvenue sur le jeux palindrome</h1>
+<div class="container">
+
+    <input type="text" placeholder="entrer votre mot">
+   
+    <p class="result"></p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.21.0/core.min.js" integrity="sha512-fo6X5UXaTRf/mHuTYJBR3Q/rpPa+LB2KUyDMROluMkZnfEEF4DhQyI5AHRoAe/zzu1Ty58MMmZXG4SuVEpXsng==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+const title=document.querySelector("h1");
+const typewriter= new Typewriter(title, {
+    loop:true,
+    delay:100
+})
+.typeString("bienvenue sur le jeux palindrome")
+.pauseFor(1000)
+.deleteAll()
+.start();
+
+
+const input = document.querySelector("input[type=text]");
+const para = document.querySelector("p");
+
+input.addEventListener("input", (e) => {
+    const valueInput = e.target.value.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+   
+    if (valueInput.split('').reverse().join('') === valueInput) {
+        para.textContent = "C'est un palindrome";
+        para.classList.add("true")
+        para.classList.remove("false");
+    } else {
+        para.textContent = "Ce n'est pas un palindrome";
+        para.classList.remove("true");
+        para.classList.add("false");
+    }
+});
+
+
+    </script>
+</body>
+</html>

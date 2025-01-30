@@ -162,26 +162,26 @@ document.body.addEventListener("click", (e) => {
 
 let fruits1 = ["Banane", "Pomme"];
 fruits1.push("Orange", "Fraise");
-console.log(fruits1);
+// console.log(fruits1);
 
 // 2.pop() : Supprime le dernier élément d'un tableau et retourne cet élément.
 
 let fruits2 = ["Banane", "Pomme", "Orange"];
 fruits2.pop();
-console.log(fruits2);
+// console.log(fruits2);
 
 // 3.shift() : Supprime le premier élément d'un tableau et retourne cet élément.
 
 let fruits3 = ["Banane", "Pomme", "Orange"];
 
 fruits3.shift();
-console.log(fruits3);
+// console.log(fruits3);
 
 // 4.unshift() : Ajoute un ou plusieurs éléments au début d'un tableau et retourne la nouvelle longueur du tableau.
 
 fruits3.unshift(0);
 // length : Renvoie le nombre d'éléments dans un tableau
-console.log(fruits3.length);
+// console.log(fruits3.length);
 
 
 
@@ -390,9 +390,22 @@ let resultat15 = texte15.split(" "); // ["Hello", "World"]
 let texte16 = "Hello World";
 let resultat16 = texte16.startsWith("Hello"); // true
 
-
-
-
-
-
 //text-typing 
+
+// LES DATES
+
+
+const date1 = new Date();
+// console.log(date1);
+
+const date2 = new Date("2025-01-31");
+// console.log(date2);
+
+const date3 = new Date();
+const year =date3.getMinutes()
+console.log(year);
+
+
+//Format ISO
+
+

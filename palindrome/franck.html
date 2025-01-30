@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="./c.css">
+</head>
+<style>
+  body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        input {
+            padding: 10px;
+            margin: 10px;
+            font-size: 16px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+</style>
+<body>
+
+    <h1>Vérificateur de Palindrome</h1>
+    <input type="text" id="ip" placeholder="Entrez un mot ou une phrase">
+    <button onclick="frank()">Vérifier</button>
+    <p id="result"></p>
+
+    <script>
+        function frank() {
+            let texte = document.getElementById("ip").value.toLowerCase().replace(/[^a-z0-9]/g, '');
+            let inverse = texte.split('').reverse().join('');
+
+            let result = texte === inverse ? "C'est un palindrome !" : "Ce n'est pas un palindrome.";
+
+            document.getElementById("result").textContent = result;
+        }
+    </script>
+</body>
+</html>
