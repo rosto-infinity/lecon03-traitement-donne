@@ -1,51 +1,27 @@
-const dataLowercase ="azertyuiopqsdfghjklmwxcvbn";
-const dataUppercase =dataLowercase.toUpperCase();
-const dataNumbers ='0123456789';
-const dataSymbole ="{} ''[]()\" \" |\^@%*§$£€¤&/()=?+-.:,;_!<>#";
-
-const rangeValue = document.getElementById('password-length');
+const dataLowercase = "azertyuiopqsdfghjklmwxcvbn";
+const dataUppercase = dataLowercase.toUpperCase();
+const dataNumbers = '0123456789';
+const dataSymbole = "{} ''[]()\" \" |\^@%*§$£€¤&/()=?+-.:,;_!<>#";
+const rangeValue = document.getElementById('passwordlength');
 const passwordOutput = document.getElementById('password-output');
-
-// document.addEventListener('click', (e)=> {
-//   console.log(e.target.id);
-// })
 
 function generatePassword() {
   let data = [];
-// if(lowercase.cheched)data.push(dataLowercase)
+  let password = "";
+  if (lowercase.checked) data.push(...dataLowercase);
+  if (uppercase.checked) data.push(...dataUppercase);
+  if (numbers.checked) data.push(...dataNumbers);
+  if (symbols.checked) data.push(...dataSymbole);
 
-  if (lowercase.checked) {
-
-    // data.push(dataLowercase)
-      for (let item of dataLowercase) {
-          data.push(item);
-      }
+  if(data.length===0){
+    alert('Veuillez sélectionnez des critères');
+    return;
   }
   
-  if (uppercase.checked) {
-    // data.push(dataUppercase)
-
-      for (let item of dataUppercase) {
-          data.push(item);
-      }
+  for (i = 0; i < rangeValue.value; i++) {
+    password = password + data[Math.floor(Math.random() * data.length)];
+    passwordOutput.value = password;
   }
-  
-  if (numbers.checked) {
-      for (let item of dataNumbers) {
-          data.push(item);
-      }
-  }
-  
-  if (symbols.checked) {
-      for (let item of dataSymbole) {
-          data.push(item);
-      }
-  }
-  
-
-
-  console.log(data);
-  
 }
 generateButton.addEventListener('click', generatePassword);
 
