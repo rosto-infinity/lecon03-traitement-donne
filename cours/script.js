@@ -406,6 +406,19 @@ const year =date3.getMinutes()
 console.log(year);
 
 
-//Format ISO
+//Format ISO en date
+
+// YYY-MM-DDTHH:MM:SSZ
+
+let date4 = new Date();
+let date5 = new Date();
+
+const isoDate4 = date4.toISOString();
+const isoDate5 = date4.toLocaleDateString();
+ console.log(isoDate5);
+
+
+
+
 
 
